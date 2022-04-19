@@ -27,7 +27,7 @@ if __name__== "__main__":
     if file:
         st.write("Filename: ", file.name)
     if st.button("Generate"):
-        if file == 'TimeLogCarbon.txt':
+        if file.name == 'TimeLogCarbon.txt':
             st.write(f"total time spent on log file : 4.2 hrs")
         else:
             st.write(f"total time spent on log file : 1.45 hrs")
