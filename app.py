@@ -23,26 +23,7 @@ def spent_time(files_list):
     return
                       
 if __name__== "__main__":
-    st.title("Webapp for tl Parser")
-    main_bg = "tl_parser.jpg"
-    main_bg_ext = "jpg"
-    st.markdown(
-    f"""
-    <style>
-    .reportview-container {{
-        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-    )
-    new_title = '<p style="font-family:sans-serif; color:white; font-size: 20px;">@streamlit</p>'
-    st.markdown(new_title, unsafe_allow_html=True)
-    html_temp = """
-    <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Time Log Parser App </h2>
-    </div>
-    """
+    st.title("Webapp to tl Parser Web Application")
     st.markdown(html_temp,unsafe_allow_html=True)
     file = st.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
