@@ -24,7 +24,6 @@ def spent_time(files_list):
                       
 if __name__== "__main__":
     st.title("Webapp to tl Parser Web Application")
-    st.markdown(html_temp,unsafe_allow_html=True)
     file = st.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
         line = str(file.read(),"utf-8")
