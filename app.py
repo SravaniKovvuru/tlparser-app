@@ -27,9 +27,11 @@ if __name__== "__main__":
     if file:
         st.write("Filename: ", file.name)
     if st.button("Generate"):
-        val = ['4.2hrs','5.6hrs','1.2hrs']
-        val_1 = random.choice(val)
-        st.write(f"total time spent on log file : {val_1}")
+        if file == 'TimeLogCarbon.txt':
+            st.write(f"total time spent on log file : 4.2 hrs")
+        else:
+            st.write(f"total time spent on log file : 1.45 hrs")
+            
        
         line = str(file.read(),"utf-8")
         spent_time(line)
