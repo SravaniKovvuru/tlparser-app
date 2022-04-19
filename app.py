@@ -24,10 +24,13 @@ def spent_time(files_list):
 if __name__== "__main__":
     st.title("Webapp to tl Parser Web Application")
     file = st.sidebar.file_uploader(" Upload the TimeLog file here")
+    if file:
+        st.write("Filename: ", file.name)
     if st.button("Generate"):
         val = ['4.2hrs','5.6hrs','1.2hrs']
         val_1 = random.choice(val)
         st.write(f"total time spent on log file : {val_1}")
+       
         line = str(file.read(),"utf-8")
         spent_time(line)
 
