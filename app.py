@@ -26,6 +26,7 @@ if __name__== "__main__":
     st.title("Webapp to tl Parser Web Application")
     file = st.sidebar.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
+        st.write(f"total time spent on log file : {val_1}")
         line = str(file.read(),"utf-8")
         spent_time(line)
 
