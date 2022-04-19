@@ -24,7 +24,7 @@ def spent_time(files_list):
                       
 if __name__== "__main__":
     st.title("Webapp to tl Parser Web Application")
-    file = st.file_uploader(" Upload the TimeLog file here")
+    file = st.sidebar.file_uploader(" Upload the TimeLog file here")
     if st.button("Generate"):
         line = str(file.read(),"utf-8")
         spent_time(line)
